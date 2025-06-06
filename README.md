@@ -34,3 +34,95 @@ Interaction Toolkit: Unity XR Interaction Toolkit
 Design Prototyping: Figma (VR interface mockups and object layout)
 
 This setup ensures the app is optimized for standalone VR headsets (like Meta Quest 3) while remaining lightweight enough for broad deployment in schools with limited resources.
+
+
+
+
+
+📦 1. Prerequisites
+Before you begin, make sure you have the following tools installed:
+
+Tool	Version	Purpose
+Unity Hub	3.5+	To manage Unity installations and projects
+Unity Editor	2022 LTS (e.g., 2022.3.X)	Compatible with XR plugins and long-term support
+Meta XR Plugin for Unity	Latest	VR integration with Meta Quest
+OpenXR Plugin	1.8+	For VR cross-compatibility
+Android SDK & NDK	Included via Unity Hub	Required for building to Meta Quest
+Meta Quest 3 Headset	Updated firmware	To test the VR application in a real environment
+(Optional) SideQuest	Latest	To install the APK file onto Meta Quest manually
+
+🔧 2. Clone the Project Repository
+bash
+Copy
+Edit
+git clone https://github.com/your-username/labscope-vr.git
+cd labscope-vr
+🧰 3. Open the Project in Unity
+Launch Unity Hub.
+
+Click Open, then select the cloned labscope-vr folder.
+
+Open the project and allow Unity to load dependencies (may take a few minutes on first run).
+
+🧱 4. Project Structure Overview
+bash
+Copy
+Edit
+labscope-vr/
+│
+├── Assets/
+│   ├── VRInteractions/           # XR interaction logic
+│   ├── LabScenes/                # Folders for Chemistry, Biology labs
+│   ├── UI/                       # HUD, buttons, tooltips
+│   ├── Models/                   # 3D assets (frog, tools, periodic table)
+│   └── Scripts/                  # C# scripts for logic, assessments
+│
+├── ProjectSettings/
+├── Packages/
+├── README.md
+└── main.unity                    # Launch scene
+🔌 5. Setup XR Plugin Settings
+Go to Edit → Project Settings → XR Plug-in Management
+
+Enable OpenXR for Android platform
+
+Under OpenXR → Features, enable:
+
+Hand Tracking
+
+Oculus Touch Controller Profile
+
+🎯 6. Build and Deploy to Meta Quest 3
+⚠️ Connect your Meta Quest 3 to your PC using USB-C and enable Developer Mode
+
+Go to File → Build Settings
+
+Switch platform to Android
+
+Add main.unity to Scenes In Build
+
+Set resolution and quality for VR
+
+Click Build and Run or Build and use SideQuest to install APK
+
+📁 7. Testing & Interaction
+Use hand tracking or Oculus controllers
+
+Interact with lab tools by grabbing, rotating, or selecting items
+
+Use gaze or pointer for UI elements
+
+Navigate between lab scenes using floating menu
+
+🧪 8. Optional Tools
+Figma: Prototype files for UI and layout are located in docs/Figma-mockups.pdf
+
+GitHub Issues: Use for bugs and feature requests
+
+Video Demo: See demo-video.mp4 in the root directory for a full walkthrough
+
+✅ Troubleshooting Tips
+Issue	Solution
+Scene not loading	Ensure main.unity is added to Build Settings
+Input not working	Check XR Interaction Toolkit setup and controller bindings
+APK won’t install	Rebuild and ensure Developer Mode is enabled on Quest
