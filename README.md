@@ -1,3 +1,5 @@
+DEMO VIDEO - https://drive.google.com/file/d/1hjxdfW_xcWo67JGLgtLgcw40MQ45VNba/view?usp=sharing
+
 ✅ Assets
 LabScope's virtual science lab includes carefully chosen assets that support curriculum goals, realistic practice, and accessibility for students in Sub-Saharan Africa.
 
